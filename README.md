@@ -1,5 +1,8 @@
 ## Social Media Sentiment Analysis 
 
+## Project setup
+(`git clone)
+
 - [x] Analyze comments endpoint from video_id
 - [x] Youtube fetch post comments 
 - [ ] Track youtube channel endpoint
