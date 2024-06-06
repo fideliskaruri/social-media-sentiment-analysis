@@ -1,0 +1,9 @@
+transformers
+torch
+scipy
+flask 
+flask-cors
+pandas
+google-api-python-client
+tqdm
+python-dotenv
