@@ -25,7 +25,8 @@ def extract_video_id(youtube_url):
 
 @app.route('/')
 def Home():
-    return "Welcome, to analyze youtube comments just go to '/api/analyzecomments/<youtube_url>.\nExample: /api/analyzecomments/https://www.youtube.com/watch?v=iwGVLiFL-Lw' "
+    return '''<h3>Welcome, to analyze youtube comments just go to '/api/analyzecomments/<youtube_url>.</h3>
+                Example: <a href="http://localhost:5000/api/analyzecomments/iwGVLiFL-Lw" >/api/analyzecomments/iwGVLiFL-Lw</a> '''
 
 @app.route('/api/analyzecomments/<video_id>')
 def analyze_youtube_comments(video_id):
