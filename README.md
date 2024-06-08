@@ -69,6 +69,6 @@ Its Id: `8wYTDjQxxa8`
 - [ ] Analyze reddit post sentiment.
       
 #### Frontend
-- [ ] Initialize React Native Project.
+- [X] Initialize React Native Project.
 - [ ] Setup routing.
 - [ ] Clerk Authentication.
