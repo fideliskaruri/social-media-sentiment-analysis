@@ -13,7 +13,7 @@ pip install -r requirements.txt
 1. Go on Google cloud console activate the Youtube Data api and then create a developer key. 
 Tutorial: `https://www.youtube.com/watch?v=QY8dhl1EQfI&list=PL_cUvD4qzbkyZ_Q_P7W70rID0JkQ8rqic`
 
-2. Create a `.env` file in the `/backend` directory and set a value `YOUTUBE_API_KEY="your key"`
+2. Create a `.env` file in the root directory and set a value `YOUTUBE_API_KEY="your key"`
 
 
 ### Using the API 
