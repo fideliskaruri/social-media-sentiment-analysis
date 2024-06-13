@@ -32,7 +32,7 @@ def analyze_youtube_comments(video_id):
 
     # video_id = extract_video_id(youtube_url=youtube_url)
     comments = fetchAllComments(video_id)
-    youtube_comments_analysis_results = AnalyzeSentiment(comments)
+    youtube_comments_analysis_results = AnalyzeSentiment(comments[:10])
     
 
     return jsonify(youtube_comments_analysis_results)
