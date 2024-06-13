@@ -10,6 +10,7 @@ roberta = "cardiffnlp/twitter-roberta-base-sentiment-latest"
 tokenizer = AutoTokenizer.from_pretrained(roberta)
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+print(f"Using {device} to run model.")
 model = AutoModelForSequenceClassification.from_pretrained(roberta).to(device)
 
 
@@ -24,10 +25,14 @@ def AnalyzeSentiment(comments):
         0), 'positive': int(0)}  # Initializing with integer values
 
     for i, comment in tqdm(enumerate(comments), total=len(comments), desc="Progress..." ):
-        if len(comment['text']) > 514:  # Adjust to 'text' key
+        
+        tokens = tokenizer.tokenize(comment['text'])
+        if len(tokens) > 514: 
             continue
         encoded_text = tokenizer(
             comment['text'], return_tensors='pt').to(device)
+        
+        # print(f"Encoded text length: {len(encoded_text[1])}")
         output = model(**encoded_text)
         scores = output.logits[0].cpu().detach().numpy()
         scores = softmax(scores)
